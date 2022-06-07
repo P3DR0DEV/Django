@@ -5,6 +5,7 @@ from .models import ToDoList
 # Create your views here.
 
 def index(response, name):
-    ls = ToDoList.objects.get(name= name)
-    return HttpResponse("<h1>%s</h1>" %ls.name)
+    ls = ToDoList.objects.get(name= name) #Adiciona o nome da lista
+    item = ls.item_set.get(id=1) #Adiciona os itens da lista
+    return HttpResponse("<h1>%s</h1><br><p>%s</p>" %(ls.name, item.text))
 
