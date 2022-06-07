@@ -4,5 +4,5 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path("<int:id>", views.index, name="index"),
+    path("<str:name>", views.index, name="index"),  #nome da lista na URL // <int:id> id da lista na url
 ] 
