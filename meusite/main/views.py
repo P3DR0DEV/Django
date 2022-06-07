@@ -9,3 +9,6 @@ def index(response, name):
     item = ls.item_set.get(id=1) #Adiciona os itens da lista
     return HttpResponse("<h1>%s</h1><br><p>%s</p>" %(ls.name, item.text))
 
+def home(response):
+    pass
+
