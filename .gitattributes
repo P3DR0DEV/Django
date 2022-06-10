@@ -1,0 +1,2 @@
+*.sqlite3 linguist-detectable=true
+*.python linguist-detectable=true 
