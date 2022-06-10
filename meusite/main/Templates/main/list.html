@@ -3,13 +3,16 @@
 
 {%block content%}
     <h1>{{ls.name}}</h1>
-    <ul>
-    {%for item in ls.item_set.all%}
-        {%if item.complete == True%}
-            <li>{{item.text}} - Complete
-        {%else%}
-            <li>{{item.text}} - Incomplete
-        {% endif %}
-    {% endfor %}
-    </ul>
+    <form method="post" action="#">
+        <ul>
+        {%for item in ls.item_set.all%}
+            {%if item.complete == True%}
+                <li>{{item.text}} 
+            {%else%}
+                <li>{{item.text}} 
+            {% endif %}
+        {% endfor %}
+        </ul>
+        <button type="submit", name="save", value="save">Save</button>
+    </form>
 {%endblock%}

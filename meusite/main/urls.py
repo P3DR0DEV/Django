@@ -8,5 +8,6 @@ urlpatterns = [
     # Nome da lista na URL // <int:id> id da lista na url
     path("<int:id>", views.index, name="index"),  
     #Home Page 
-    path("", views.home, name = 'home')
+    path("", views.home, name = 'home'),
+    path("create/", views.create , name="create")
 ] 
