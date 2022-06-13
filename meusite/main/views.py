@@ -27,6 +27,12 @@ def index(response, id):
                 ls.item_set.create(text=txt, complete= False)
             else:
                 print('invalid')
+        elif response.POST.get("delItem"):
+            txt= response.POST.get("del")
+            if len(txt)> 2:
+                ls.objects.remove(text=txt)
+            else:
+                print('Invalid')
             
     
     return render(response, "main/list.html", {"ls": ls})
